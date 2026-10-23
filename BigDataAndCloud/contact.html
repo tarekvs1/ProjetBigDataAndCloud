@@ -1,0 +1,277 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+    <title>Contact - École Primaire Les Petits Génies</title>
+</head>
+
+<body class="contact-page">
+
+    <!-- Navigation -->
+    <header>
+        <div class="navbar">
+
+            <a href="index.html" class="logo">
+                <div class="logo-mark">PG</div>
+
+                <div>
+                    <h1>École Primaire<br>Les Petits Génies</h1>
+                    <p>Apprendre, grandir, réussir</p>
+                </div>
+            </a>
+
+            <nav>
+                <a href="WelcomePage.html">Accueil</a>
+                <a href="connection.html" class="nav-contact active">Ce Connecter</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Bannière de la page -->
+        <section class="page-banner">
+
+            <img
+                class="banner-image"
+                src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1600&q=85"
+                alt="Environnement scolaire"
+            >
+
+            <div class="banner-content">
+
+                <div class="breadcrumb">
+                    <a href="index.html">Accueil</a>
+                    &nbsp; / &nbsp; Contact
+                </div>
+
+                <h2>Contactez-nous</h2>
+
+                <p>
+                    Une question sur notre école ou sur les inscriptions ?
+                    Notre équipe est à votre disposition pour vous renseigner.
+                </p>
+
+            </div>
+        </section>
+
+        <!-- Coordonnées et formulaire -->
+        <section class="container">
+
+            <div class="section-heading">
+                <span>Nous sommes à votre écoute</span>
+                <h2>Restons en contact</h2>
+                <p>
+                    Retrouvez nos coordonnées ou envoyez-nous un message
+                    en remplissant le formulaire ci-dessous.
+                </p>
+            </div>
+
+            <div class="contact-layout">
+
+                <!-- Informations de contact -->
+                <aside class="contact-info">
+
+                    <h2>Nos coordonnées</h2>
+
+                    <p>
+                        Retrouvez les informations nécessaires pour
+                        contacter l'École Primaire Les Petits Génies.
+                    </p>
+
+                    <div class="info-item">
+                        <div class="info-icon">A</div>
+                        <div>
+                            <h3>Adresse</h3>
+                            <p>À compléter avec l'adresse de l'école</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">T</div>
+                        <div>
+                            <h3>Téléphone</h3>
+                            <p>
+                                <a href="tel:+21600000000">
+                                    À compléter avec le numéro de l'école
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">@</div>
+                        <div>
+                            <h3>E-mail</h3>
+                            <p>
+                                <a href="mailto:contact@exemple.com">
+                                    contact@exemple.com
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">H</div>
+                        <div>
+                            <h3>Horaires</h3>
+                            <p>À compléter selon les horaires de l'école</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-decoration">
+                        <p>
+                            Nous accordons une grande importance aux échanges
+                            avec les parents afin d'accompagner au mieux
+                            chaque enfant dans son parcours scolaire.
+                        </p>
+                    </div>
+
+                </aside>
+
+                <!-- Formulaire de contact -->
+                <div class="contact-form">
+
+                    <h2>Écrivez-nous</h2>
+
+                    <p class="form-description">
+                        Remplissez le formulaire. Les champs marqués
+                        d'un astérisque sont obligatoires.
+                    </p>
+
+                    <p class="required-note">
+                        (*) Champs obligatoires
+                    </p>
+
+                    <form id="contactForm">
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+                                <label for="prenom">Prénom *</label>
+                                <input
+                                    type="text"
+                                    id="prenom"
+                                    name="prenom"
+                                    placeholder="Votre prénom"
+                                    autocomplete="given-name"
+                                    required
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="nom">Nom *</label>
+                                <input
+                                    type="text"
+                                    id="nom"
+                                    name="nom"
+                                    placeholder="Votre nom"
+                                    autocomplete="family-name"
+                                    required
+                                >
+                            </div>
+
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Votre adresse e-mail *</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="exemple@email.com"
+                                autocomplete="email"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="sujet">Sujet *</label>
+                            <select id="sujet" name="sujet" required>
+                                <option value="">Choisir un sujet</option>
+                                <option value="inscription">Inscription</option>
+                                <option value="scolarite">Scolarité</option>
+                                <option value="activites">Activités scolaires</option>
+                                <option value="rendez-vous">Demande de rendez-vous</option>
+                                <option value="autre">Autre demande</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Votre message *</label>
+                            <textarea
+                                id="message"
+                                name="message"
+                                placeholder="Écrivez votre message ici..."
+                                required
+                            ></textarea>
+                        </div>
+
+                        <label class="consent" for="consentement">
+                            <input
+                                type="checkbox"
+                                id="consentement"
+                                name="consentement"
+                                required
+                            >
+
+                            <span>
+                                J'accepte que les informations saisies
+                                soient utilisées pour répondre à ma demande.
+                            </span>
+                        </label>
+
+                        <button type="submit" class="submit-button">
+                            Envoyer le message
+                        </button>
+
+                        <div
+                            id="formMessage"
+                            class="form-message"
+                            role="status"
+                            aria-live="polite"
+                        ></div>
+
+                    </form>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Pied de page -->
+    <footer>
+        <p>
+            © 2026 <span>École Primaire Les Petits Génies</span>.
+            Tous droits réservés.
+        </p>
+    </footer>
+
+    <script>
+        const contactForm = document.getElementById("contactForm");
+        const formMessage = document.getElementById("formMessage");
+
+        contactForm.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            if (!contactForm.checkValidity()) {
+                contactForm.reportValidity();
+                return;
+            }
+
+            formMessage.style.display = "block";
+            formMessage.textContent =
+                "Le formulaire est valide, mais aucun message n'a été envoyé. " +
+                "Un serveur doit être configuré pour recevoir les messages.";
+
+            contactForm.reset();
+        });
+    </script>
+
+</body>
+</html>
