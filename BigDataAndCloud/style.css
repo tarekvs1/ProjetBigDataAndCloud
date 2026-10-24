@@ -1365,195 +1365,366 @@ footer span {
     .connection-page .form-options {
         align-items: flex-start;
         flex-direction: column;
-    }
-    /* ========================================
-   PAGE MOT DE PASSE OUBLIÉ
-======================================== */
+    }  
+}
+
+/* =========================================
+   8. PAGE MOT DE PASSE OUBLIÉ
+   forgot-password.html
+========================================= */
 
 .forgot-page {
+    background: var(--background);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background: var(--white);
-    color: var(--navy);
-    font-family: Arial, sans-serif;
 }
 
-/* Header */
+/* En-tête */
 
-.forgot-header {
+/* Header - Mot de passe oublié */
+.forgot-page header {
+    width: 100%;
+    background: var(--white);
+    border-bottom: 1px solid #E4E8EF;
+    box-shadow: 0 2px 12px rgba(23, 39, 71, 0.08);
+}
+
+.forgot-page .navbar {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 25px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 20px 7%;
-    background: var(--white);
-    border-bottom: 1px solid #eeeeee;
+    justify-content: space-between;
+    box-sizing: border-box;
 }
 
-.forgot-logo {
-    color: var(--navy);
+/* Logo identique à la page Contact */
+.forgot-page .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
     text-decoration: none;
-    font-size: 20px;
+    color: var(--navy);
+}
+
+.forgot-page .logo-mark {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--coral);
+    color: var(--white);
+    border-radius: 10px;
+    font-size: 22px;
     font-weight: bold;
 }
 
-.forgot-back {
-    padding: 10px 18px;
+.forgot-page .logo h1 {
+    margin: 0;
+    color: var(--navy);
+    font-size: 17px;
+}
+
+.forgot-page .logo p {
+    margin: 2px 0 0;
+    color: var(--gray);
+    font-size: 12px;
+}
+
+.forgot-page .header-links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.forgot-page .header-links a {
+    text-decoration: none;
+    color: var(--navy);
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.forgot-page .header-links .back-link {
+    padding: 11px 18px;
     background: var(--navy);
     color: var(--white);
-    text-decoration: none;
+    border: 2px solid var(--navy);
     border-radius: 7px;
+}
+
+.forgot-page .header-links .back-link:hover {
+    background: var(--coral);
+    border-color: var(--coral);
+}
+
+@media (max-width: 600px) {
+    .forgot-page .navbar {
+        padding: 14px 16px;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .forgot-page .header-links {
+        flex-wrap: wrap;
+    }
+}
+
+.forgot-page .back-link {
+    display: inline-block;
+    padding: 11px 18px;
+    border: 2px solid var(--navy);
+    border-radius: 7px;
+    background: var(--navy);
+    color: var(--white);
+    font-size: 14px;
     font-weight: bold;
     transition: 0.3s;
 }
 
-.forgot-back:hover {
+.forgot-page .back-link:hover {
     background: var(--coral);
+    border-color: var(--coral);
     color: var(--white);
 }
 
-/* Main */
+/* Contenu principal */
 
-.forgot-main {
+.forgot-page main {
     flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 50px 20px;
-    background: linear-gradient(
-        135deg,
-        #f4fbff,
-        var(--white),
-        #fff3f1
-    );
+    padding: 55px 20px 65px;
 }
 
-/* Form card */
-
-.forgot-card {
-    width: 100%;
-    max-width: 460px;
-    padding: 40px;
-    background: var(--white);
-    border: 1px solid #eeeeee;
-    border-radius: 16px;
-    box-shadow: 0 10px 35px rgba(23, 39, 71, 0.10);
+.forgot-page .page-heading {
     text-align: center;
-    box-sizing: border-box;
+    margin-bottom: 30px;
 }
 
-.forgot-card h1 {
-    margin-bottom: 15px;
+.forgot-page .page-heading .eyebrow {
+    color: var(--coral);
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.forgot-page .page-heading h2 {
     color: var(--navy);
-    font-size: 28px;
+    font-size: 34px;
+    margin: 8px 0;
 }
 
-.forgot-subtitle {
-    margin-bottom: 28px;
-    color: #667085;
+.forgot-page .page-heading p {
+    color: var(--gray);
     font-size: 15px;
-    line-height: 1.7;
 }
 
-/* Form */
+/* Carte du formulaire */
 
-.forgot-card form {
-    text-align: left;
+.forgot-page .forgot-card {
+    max-width: 440px;
+    margin: auto;
+    padding: 30px;
+    background: var(--white);
+    border: 1px solid #E3E8F0;
+    border-radius: 12px;
+    box-shadow: 0 10px 35px rgba(23, 39, 71, 0.08);
 }
 
-.forgot-card label {
+.forgot-page .forgot-card h3 {
+    color: var(--navy);
+    font-size: 23px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.forgot-page .forgot-subtitle {
+    color: var(--gray);
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* Champs du formulaire */
+
+.forgot-page .form-group {
+    margin-bottom: 20px;
+}
+
+.forgot-page .form-group label {
     display: block;
-    margin-bottom: 9px;
+    color: var(--navy);
     font-size: 14px;
     font-weight: bold;
+    margin-bottom: 8px;
 }
 
-.forgot-card input {
+.forgot-page .form-group input {
     width: 100%;
-    padding: 14px;
-    margin-bottom: 22px;
-    border: 1px solid #d5d9e2;
-    border-radius: 7px;
+    padding: 13px 14px;
+    border: 1px solid #D4DCE7;
+    border-radius: 6px;
     outline: none;
-    font-size: 15px;
-    box-sizing: border-box;
-    transition: border-color 0.3s, box-shadow 0.3s;
+    font-size: 14px;
+    background: var(--white);
+    transition: 0.2s;
 }
 
-.forgot-card input:focus {
+.forgot-page .form-group input:focus {
     border-color: var(--blue);
     box-shadow: 0 0 0 3px rgba(157, 220, 243, 0.35);
 }
 
-/* Submit button */
+/* Bouton d'envoi */
 
-.forgot-submit {
+.forgot-page .forgot-submit {
     width: 100%;
     padding: 14px;
-    border: 2px solid var(--coral);
-    border-radius: 7px;
+    border: none;
+    border-radius: 6px;
     background: var(--coral);
     color: var(--white);
-    font-size: 16px;
+    font-size: 15px;
     font-weight: bold;
     cursor: pointer;
-    transition: 0.3s;
+    transition: background 0.3s;
 }
 
-.forgot-submit:hover {
+.forgot-page .forgot-submit:hover {
     background: var(--navy);
-    border-color: var(--navy);
-    color: var(--white);
 }
 
-/* Back to login */
+/* Retour à la connexion */
 
-.forgot-login {
-    display: inline-block;
-    margin-top: 25px;
+.forgot-page .forgot-login {
+    display: block;
+    margin-top: 23px;
+    text-align: center;
     color: var(--navy);
-    text-decoration: none;
     font-size: 14px;
     font-weight: bold;
     transition: color 0.3s;
 }
 
-.forgot-login:hover {
+.forgot-page .forgot-login:hover {
     color: var(--coral);
 }
 
-/* Footer */
+/* Message de résultat */
 
-.forgot-footer {
-    padding: 22px 15px;
+.forgot-page .forgot-message {
+    display: none;
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 6px;
+    background: #EAF8FD;
+    color: var(--navy);
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* Pied de page */
+
+.forgot-page footer {
+    margin-top: auto;
     background: var(--navy);
     color: var(--white);
+    padding: 20px;
     text-align: center;
     font-size: 13px;
 }
 
-.forgot-footer p {
-    margin: 5px 0;
+.forgot-page footer span {
+    color: var(--blue);
 }
 
 /* Responsive */
 
-@media (max-width: 500px) {
-    .forgot-header {
-        padding: 16px 5%;
-    }
-
-    .forgot-logo {
-        font-size: 16px;
-    }
-
-    .forgot-card {
-        padding: 28px 22px;
-    }
-
-    .forgot-card h1 {
-        font-size: 24px;
+@media (max-width: 900px) {
+    .forgot-page .navbar {
+        flex-wrap: wrap;
     }
 }
-    
+
+@media (max-width: 600px) {
+    .forgot-page .navbar {
+        padding: 14px 16px;
+    }
+
+    .forgot-page .logo h1 {
+        font-size: 14px;
+    }
+
+    .forgot-page .header-links {
+        width: 100%;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+    }
+
+    .forgot-page .back-link {
+        padding: 9px 12px;
+        font-size: 13px;
+    }
+
+    .forgot-page main {
+        padding: 40px 15px;
+    }
+
+    .forgot-page .page-heading h2 {
+        font-size: 28px;
+    }
+
+    .forgot-page .forgot-card {
+        padding: 23px 20px;
+    }
+}
+/* Champ Adresse e-mail */
+.forgot-page .form-group input[type="email"] {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px 16px;
+    margin-top: 8px;
+
+    background: #F9FAFC;
+    color: var(--navy);
+    border: 1.5px solid #DCE3ED;
+    border-radius: 9px;
+
+    font-family: inherit;
+    font-size: 15px;
+    outline: none;
+
+    transition: all 0.25s ease;
+}
+
+/* Texte indicatif */
+.forgot-page .form-group input[type="email"]::placeholder {
+    color: #98A2B3;
+    font-size: 14px;
+}
+
+/* Quand l'utilisateur clique dans le champ */
+.forgot-page .form-group input[type="email"]:focus {
+    background: var(--white);
+    border-color: var(--coral);
+    box-shadow: 0 0 0 4px rgba(244, 119, 112, 0.15);
+}
+
+/* Quand le champ est valide */
+.forgot-page .form-group input[type="email"]:valid {
+    border-color: #DCE3ED;
+}
+
+/* Label */
+.forgot-page .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--navy);
+    font-size: 14px;
+    font-weight: 600;
 }
